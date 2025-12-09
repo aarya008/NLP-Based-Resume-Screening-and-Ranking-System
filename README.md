@@ -1,4 +1,4 @@
-# Automated Resume Screening Bot
+# NLP-Based Resume Screening and Ranking System
 
 This project is a Python-based automation system that extracts skills, experience, and key sections from resumes (PDFs), matches them with a given job description, calculates a similarity score using NLP (TF-IDF), stores structured data in a SQLite database, and generates ranked candidate output.
 
