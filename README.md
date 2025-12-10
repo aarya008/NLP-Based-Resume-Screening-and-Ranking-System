@@ -1,7 +1,55 @@
 # NLP-Based Resume Screening and Ranking System
 
-This project is a Python-based automation system that extracts skills, experience, and key sections from resumes (PDFs), matches them with a given job description, calculates a similarity score using NLP (TF-IDF), stores structured data in a SQLite database, and generates ranked candidate output.
+📌 Project Overview
 
+Recruitment often involves manually reviewing hundreds of resumes, which is time-consuming, subjective, and inefficient. This project automates the resume screening process by leveraging Natural Language Processing (NLP) and machine learning–based text similarity techniques to objectively evaluate and rank resumes against a given job description.
+
+The system compares candidate resumes with job requirements, assigns relevance scores, and produces a ranked output, enabling recruiters to shortlist suitable candidates quickly and consistently.
+⚙️ How the System Works
+
+Job Description Processing
+
+Reads the job description from a text file.
+
+Extracts role context and required skills using rule-based parsing.
+
+Resume Processing
+
+Converts candidate resume PDFs into plain text.
+
+Cleans and normalizes the text to remove noise.
+
+Extracts skills, years of experience, and basic contact details using regex-based pattern recognition.
+
+Text Vectorization & Scoring
+
+Uses TF-IDF (Term Frequency–Inverse Document Frequency) to convert text into numerical vectors.
+
+Applies cosine similarity to calculate how closely each resume matches the job description.
+
+Generates a relevance score for every candidate.
+
+Data Storage & Ranking
+
+Stores job descriptions, candidate data, and scores in an SQLite database.
+
+Fetches and ranks candidates in descending order of similarity score.
+
+Exports the final ranked list as a CSV file for recruiter-friendly review.
+
+🛠️ Technologies Used
+
+Programming Language: Python
+
+NLP & ML: TF-IDF Vectorization, Cosine Similarity (Scikit-learn)
+
+Text Processing: Regex, custom text cleaning pipeline
+
+Database: SQLite
+
+Data Handling: Pandas
+
+PDF Processing: PyPDF2
 ## Architecture Overview
 
 - **OCR / Parsing**: Extract text from resume PDFs.
