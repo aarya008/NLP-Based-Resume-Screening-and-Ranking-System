@@ -1,55 +1,36 @@
 # NLP-Based Resume Screening and Ranking System
 
-📌 Project Overview
+## 📌 Overview
+This project automates resume screening by using **Natural Language Processing (NLP)** and **machine learning–based text similarity** to match candidate resumes with a job description. It objectively scores and ranks resumes, reducing manual effort and improving hiring efficiency.
 
-Recruitment often involves manually reviewing hundreds of resumes, which is time-consuming, subjective, and inefficient. This project automates the resume screening process by leveraging Natural Language Processing (NLP) and machine learning–based text similarity techniques to objectively evaluate and rank resumes against a given job description.
+---
 
-The system compares candidate resumes with job requirements, assigns relevance scores, and produces a ranked output, enabling recruiters to shortlist suitable candidates quickly and consistently.
-⚙️ How the System Works
+## ⚙️ How It Works
+- Reads a job description and extracts required skills.
+- Converts resume PDFs into text and cleans the data.
+- Extracts candidate skills, experience, and contact details.
+- Uses **TF-IDF** vectorization and **cosine similarity** to compute match scores.
+- Stores results in an **SQLite database**.
+- Exports ranked candidates as a **CSV file**.
 
-Job Description Processing
+---
 
-Reads the job description from a text file.
+## 🛠️ Tech Stack
+- **Language:** Python  
+- **NLP / ML:** TF-IDF, Cosine Similarity (Scikit-learn)  
+- **Text Processing:** Regex, custom cleaning pipeline  
+- **Database:** SQLite  
+- **Data Handling:** Pandas  
+- **PDF Parsing:** PyPDF2  
 
-Extracts role context and required skills using rule-based parsing.
+---
 
-Resume Processing
+## ✅ Key Features
+- Automated resume screening
+- Objective, data-driven ranking
+- Modular and scalable design
+- Recruiter-friendly CSV output
 
-Converts candidate resume PDFs into plain text.
-
-Cleans and normalizes the text to remove noise.
-
-Extracts skills, years of experience, and basic contact details using regex-based pattern recognition.
-
-Text Vectorization & Scoring
-
-Uses TF-IDF (Term Frequency–Inverse Document Frequency) to convert text into numerical vectors.
-
-Applies cosine similarity to calculate how closely each resume matches the job description.
-
-Generates a relevance score for every candidate.
-
-Data Storage & Ranking
-
-Stores job descriptions, candidate data, and scores in an SQLite database.
-
-Fetches and ranks candidates in descending order of similarity score.
-
-Exports the final ranked list as a CSV file for recruiter-friendly review.
-
-🛠️ Technologies Used
-
-Programming Language: Python
-
-NLP & ML: TF-IDF Vectorization, Cosine Similarity (Scikit-learn)
-
-Text Processing: Regex, custom text cleaning pipeline
-
-Database: SQLite
-
-Data Handling: Pandas
-
-PDF Processing: PyPDF2
 ## Architecture Overview
 
 - **OCR / Parsing**: Extract text from resume PDFs.
